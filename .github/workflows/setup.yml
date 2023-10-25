@@ -13,3 +13,6 @@ jobs:
 
       - name: Run a one-line script
         run: bash src/hello.sh
+      
+      - name: Create a main.sh file
+        run: touch src/main.sh && echo "echo 'Hello World'" >> src/main.sh

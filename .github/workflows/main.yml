@@ -11,15 +11,18 @@ on:
   workflow_dispatch:
   workflow_call:
 jobs:
-  runs-on: ubuntu-latest
 
   setup:
     uses: fayaz07/gh-actions/.github/workflows/setup.yml@main
 
   build:
+    runs-on: ubuntu-latests
     needs: setup
     steps:
       - uses: actions/checkout@v3
 
       - name: Say Main
         run: echo "Main"
+
+      - name: Run main.sh
+        run: bash src/main.sh
