@@ -1,4 +1,4 @@
-name: Setup
+name: Main
 
 # Controls when the workflow will run
 on:
@@ -11,9 +11,13 @@ on:
   workflow_dispatch:
 
 jobs:
+  setup:
+    runs-on: ubuntu-latest
+    uses: fayaz07/gh-actions/.github/workflows/setup.yml@main
+
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v3
 
