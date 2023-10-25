@@ -2,12 +2,12 @@ name: Setup
 
 # Controls when the workflow will run
 on:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v3
 
