@@ -11,9 +11,12 @@ on:
   workflow_dispatch:
   workflow_call:
 jobs:
+
+  setup:
+    uses: fayaz07/gh-actions/.github/workflows/setup.yml@main
+
   build:
     runs-on: ubuntu-latest
-    uses: fayaz07/gh-actions/.github/workflows/setup.yml@main
 
     steps:
       - uses: actions/checkout@v3
