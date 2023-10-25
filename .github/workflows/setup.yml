@@ -5,8 +5,7 @@ on:
   workflow_call:
 
 jobs:
-  build:
-    working-directory: ${{ github.workspace }}    
+  build:    
     steps:
       - uses: actions/checkout@v3
 
